@@ -1,0 +1,5 @@
+Access Spring Boot Admin locally with:
+
+  kubectl -n {{ .Release.Namespace }} port-forward service/{{ include "adminserver.fullname" . }} 8085:{{ .Values.service.port }}
+
+Then open http://localhost:8085.
